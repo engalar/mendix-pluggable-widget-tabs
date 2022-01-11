@@ -1,18 +1,19 @@
 {
-  "name": "graph",
-  "widgetName": "Graph",
-  "version": "1.2.6",
+  "name": "tabs",
+  "widgetName": "Tabs",
+  "version": "1.0.0",
   "description": "My widget description",
   "packagePath": "mendixcn",
   "author": "wengao.liu@siemens.com",
   "dependencies": {
     "ahooks": "^2.10.14",
-    "classnames": "^2.2.6"
+    "classnames": "^2.2.6",
+    "antd": "^4.16.13"
   },
   "scripts": {
     "m": "npm install -g cnpm rollup prettier eslint --registry=https://registry.npmmirror.com",
     "x": "npm i --registry=https://registry.npmmirror.com",
-    "testProject": "cmd /c git clone https://gitee.com/engalar/mendix-testproject-800.git --depth=1 ./tests/testProject && rd /s /q  .\\tests\\testProject\\.git",
+    "testProject": "cmd /c git clone https://gitee.com/engalar/mendix-testproject-905.git --depth=1 ./tests/testProject && rd /s /q  .\\tests\\testProject\\.git",
     "r": "node ./script/rename.js",
     "u": "node ./script/update.js",
     "start": "pluggable-widgets-tools start:web",
@@ -23,7 +24,7 @@
     "release": "pluggable-widgets-tools release:web",
     "openTestProject": "start tests/testProject/testProject.mpr",
     "backupTestProject": "cmd /c (if not exist dummy\\deployment\\data\\database\\hsqldb\\default (mkdir dummy\\deployment\\data\\database\\hsqldb\\default) else (echo skip 1)) && (if not exist dummy\\widgets (mkdir dummy\\widgets) else (echo skip 2)) && copy tests\\testProject\\testProject.mpr dummy\\ /Y && copy tests\\testProject\\deployment\\data\\database\\hsqldb\\default\\default.script dummy\\deployment\\data\\database\\hsqldb\\default\\",
-    "postbackupTestProject": "cmd /c copy tests\\testProject\\widgets\\mendixcn.Graph.mpk dummy\\widgets\\",
+    "postbackupTestProject": "cmd /c copy tests\\testProject\\widgets\\mendixcn.Tabs.mpk dummy\\widgets\\",
     "restoreTestProject": "cmd /c xcopy dummy tests\\testProject /E /Y"
   },
   "copyright": "2020 Mendix Technology BV",
